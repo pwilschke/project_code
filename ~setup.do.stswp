@@ -11,7 +11,7 @@ pwd
 global directory "`c(pwd)'"
 
 di "$directory"
-//Run these top lines to get your Stata directory on whatever computer you're using. Then, use the below if loops as a baseline to create your necessary setups; just paste an extra else if loop to the else if list and change the "if" line to your directory. If you're working through Remote Desktop (which you should) you'll notice that it's got a different baseline directory than your Hilltop laptop. So you can do (as I've done) two separate else if's, for each of those two directories. 
+//Run these top lines to get your Stata directory on whatever computer you're using. Then, use the below if loops as a baseline to create your necessary setups; just paste an extra else if loop to the else if list and change the "if" line to your directory. If you're working through Remote Desktop (which you should) you'll notice that it's got a different baseline directory than your Hilltop laptop. So you can do (as I've done) two separate else if's, for each of those t
 
 //PW PC
 if "$directory" == "C:\Users\pwils\Documents" {

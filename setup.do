@@ -42,3 +42,13 @@ else if "$directory" == "J:\projects\NSF Build and Broaden\PW folder\Codes" {
 	global output "J:\projects\NSF Build and Broaden\PW TS Project\products"
 	global code "J:\projects\NSF Build and Broaden\PW TS Project\project_code"
 }
+
+//Hilltop Remote Desktop (for Timothy)
+else if "$directory" == "C:\Users\tshaia1\Documents" {
+	global folder "J:\projects\NSF Build and Broaden\PW TS Project"
+	global raw_data "J:\projects\NSF Build and Broaden\PW TS Project\raw_data"
+	global intermediate_data "J:\projects\NSF Build and Broaden\PW TS Project\intermediate_data"
+	global final_data "J:\projects\NSF Build and Broaden\PW TS Project\final_data"
+	global output "J:\projects\NSF Build and Broaden\PW TS Project\products"
+	global code "J:\projects\NSF Build and Broaden\PW TS Project\project_code"
+}

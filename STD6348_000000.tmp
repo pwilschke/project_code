@@ -1,16 +1,3 @@
-********************************************************************************
-**********************************Setup*****************************************
-********************************************************************************
-//RUN THE SETUP DO FILE FIRST. 
-
-
-********************************************************************************
-**************************Start of Data Work************************************
-********************************************************************************
-use "$intermediate_data/shoppables_analysis.dta", clear
-
-replace pop=pop/1000
-replace hh_inc=hh_inc/1000
 est clear
 //Basic research q: How do prices vary in rural vs urban hospitals?
 eststo: areg log_price pop age hh_inc hosp_per_zip, absorb(code) robust
@@ -28,11 +15,6 @@ estadd local fe "Procedure Code"
 eststo: areg log_price pop age hh_inc hosp_per_zip if govt == 1, absorb(code) robust
 estadd scalar r2s = e(r2_a)
 estadd local fe "Procedure Code"
-
-label variable log_price "Log(Procedure Price+1)"
-label variable pop "Population (Thous.)"
-label variable hh_inc "Median Household Income (Thous. USD)"
-label variable hosp_per_zip "Hospitals Per Zip Code"
 
 esttab using "$output/regressions.tex", replace  ///
  b(3) se(3) label star(* 0.10 ** 0.05 *** 0.01) ///
